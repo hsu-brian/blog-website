@@ -136,8 +136,21 @@ a:hover {
 </div>
 
 <div class="footer">
+  <!--
   <script type="text/javascript">var submitted=false;</script>
   <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='index.html';}"></iframe>
+  -->
+  <script type="text/javascript">
+    var load = 0;
+    document.getElementById('gform').onload = function(){
+    /*Execute on every reload on iFrame*/
+    load++;
+    if(load > 1){
+        /*Second reload is a submit*/
+        document.location = "https://blog.hsubrian.com/";
+    }
+  }
+  </script>
   <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdTeqbKvyJUh-YXbLIsJTNtB85t_P-ycw_kzN6c48fsVry2xA/formResponse">
     <label for="newsletter"> Sign up for my newsletter:  </label>
     <input type="text" id="newsletter" name="entry.2018344084"></input>
