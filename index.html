@@ -85,10 +85,7 @@ a:hover {
     padding: 0;
   }
 }
-</style>
-</head>
-<body>
-
+  
 window.onbeforeunload = unloadMess;
 function unloadMess(){
   var conf = confirm("Wait! Before you go, please share your stories or experiences on the message forum.");
@@ -97,6 +94,9 @@ function unloadMess(){
     }
 }
   
+</style>
+</head>
+<body onUnLoad="alert('leaving so soon?');">
 <div class="header">
   <h2>Life of Brian</h2>
 </div>
