@@ -89,6 +89,14 @@ a:hover {
 </head>
 <body>
 
+window.onunload = unloadPage;
+
+function unloadPage()
+{
+ alert("unload event detected!");
+} 
+  
+  
 <div class="header">
   <h2>Life of Brian</h2>
 </div>
