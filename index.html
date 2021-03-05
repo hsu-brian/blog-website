@@ -89,13 +89,13 @@ a:hover {
 </head>
 <body>
 
-window.onunload = unloadPage;
-
-function unloadPage()
-{
- alert("unload event detected!");
-} 
-  
+window.onbeforeunload = unloadMess;
+function unloadMess(){
+  var conf = confirm("Wait! Before you go, please share your stories or experiences on the message forum.");
+    if(conf){
+    window.location.href = "http://www.domain.com/message-forum";
+    }
+}
   
 <div class="header">
   <h2>Life of Brian</h2>
